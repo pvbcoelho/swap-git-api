@@ -4,7 +4,7 @@ defmodule SwapGitAppWeb.GitController do
   alias SwapGitApp.GitService
   action_fallback SwapGitAppWeb.FallbackController
 
-  def create_process(conn, %{"user" => user, "git_repository" => git_repository} = params) do
+  def create_process(conn, %{"user" => user, "git_repository" => git_repository} = _params) do
     with {:ok, response} <- GitService.create_process(user, git_repository) do
       conn
       |> put_status(:created)
