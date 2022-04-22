@@ -1,0 +1,36 @@
+version: '3.3'
+volumes:
+  data:
+services:
+  swap-git-api:
+    container_name: swap-git-api
+    image: swap-git-api
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - env.dev
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./config:/app/config
+      - ./lib:/app/lib
+      - ./priv:/app/priv
+      - ./mix.exs:/app/mix.exs
+      - ./mix.lock:/app/mix.lock
+      - ./test:/app/test
+      - ./entrypoint.sh:/app/entrypoint.sh
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: swap_git_app_dev
+    restart: always
+    ports: 
+      - 5432:5432
+    volumes:
+      - data:/var/lib/postgresql/data

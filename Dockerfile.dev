@@ -1,0 +1,16 @@
+FROM bitwalker/alpine-elixir:1.13.3
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY mix.exs mix.lock entrypoint.sh ./
+
+RUN apk update \
+    && apk add --no-cache postgresql-client ca-certificates inotify-tools \
+    && mix do deps.get, deps.compile \
+    && chmod +x /app/entrypoint.sh && \
+    update-ca-certificates
+
+COPY . . 
+
+ENTRYPOINT [ "sh", "/app/entrypoint.sh" ]
