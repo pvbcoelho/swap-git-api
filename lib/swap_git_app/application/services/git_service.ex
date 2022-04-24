@@ -1,7 +1,7 @@
 defmodule SwapGitApp.GitService do
   alias SwapGitApp.Infrastructure.HttpClient.GitClient
 
-  def create_process(user, git_repository) do
-    GitClient.get_issues(user, git_repository)
+  def create_process(owner, repo) do
+    GitClient.get_commits(owner, repo, 2)
   end
 end
