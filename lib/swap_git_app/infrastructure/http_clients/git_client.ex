@@ -10,13 +10,21 @@ defmodule SwapGitApp.Infrastructure.HttpClient.GitClient do
   plug Tesla.Middleware.Headers, [{"content-type", "application/json"}, {"accept", "*/*"}]
   plug(Tesla.Middleware.JSON)
 
-  def get_issues(user, git_repository) do
+  def get_issues(owner, repo) do
     response =
-      "/repos/#{user}/#{git_repository}/issues"
+      "/repos/#{owner}/#{repo}/issues"
       |> get()
       |> handle_response()
 
-    Logger.info("response: #{inspect(response)}")
+    response
+  end
+
+  def get_commits(owner, repo, page) do
+    response =
+      "/repos/#{owner}/#{repo}/commits?per_page=100&page=#{page}"
+      |> get()
+      |> handle_response()
+
     response
   end
 end

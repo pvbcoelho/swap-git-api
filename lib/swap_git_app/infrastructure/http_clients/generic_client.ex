@@ -3,11 +3,11 @@ defmodule SwapGitApp.Infrastructure.HttpClients.GenericClient do
   This module is a generic HTTP client
   """
 
+  require Logger
+
   defmacro __using__(opts) do
     quote do
       use Tesla
-
-      require Logger
 
       adapter(Tesla.Adapter.Hackney)
       plug Tesla.Middleware.BaseUrl, base_url(unquote(opts[:base_url_key]))
@@ -17,13 +17,18 @@ defmodule SwapGitApp.Infrastructure.HttpClients.GenericClient do
         {:ok, body}
       end
 
-      def handle_response({:ok, %Tesla.Env{status: status} = response})
+      def handle_response({:error, %Tesla.Env{status: status} = response})
           when status in [408, 500..599] do
-        {:error, response}
+        Logger.info("processable_error log: #{inspect(response)}")
+        {:processable_error, response}
       end
 
-      def handle_response(error) do
-        {:unprocessable_error, error}
+      def handle_response({:ok, %Tesla.Env{status: 404} = response}) do
+        {:error, :not_found}
+      end
+
+      def handle_response(response) do
+        {:error, response}
       end
 
       def base_url(base_url_key) do

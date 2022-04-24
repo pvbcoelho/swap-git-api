@@ -15,8 +15,7 @@ defmodule SwapGitAppWeb.ErrorView do
     %{
       status: 404,
       message: "not_found",
-      description: "Endpoint not found",
-      errors: []
+      description: "User or repository not found"
     }
   end
 
