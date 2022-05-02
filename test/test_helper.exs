@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(SwapGitApp.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(SwapGitApi.Repo, :manual)

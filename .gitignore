@@ -22,7 +22,7 @@ erl_crash.dump
 *.beam
 
 # Ignore package tarball (built via "mix hex.build").
-swap_git_app-*.tar
+swap_git_api-*.tar
 
 .elixir_ls/
 

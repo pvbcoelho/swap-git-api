@@ -1,11 +1,11 @@
 import Config
 
-config :swap_git_app, SwapGitApp.Repo,
+config :swap_git_api, SwapGitApi.Repo,
   url: System.get_env("DATABASE_URL"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
-config :swap_git_app, SwapGitAppWeb.Endpoint,
+config :swap_git_api, SwapGitApiWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {0, 0, 0, 0}, port: 4000],

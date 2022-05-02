@@ -1,9 +1,9 @@
-defmodule SwapGitApp.MixProject do
+defmodule SwapGitApi.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :swap_git_app,
+      app: :swap_git_api,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,8 +19,8 @@ defmodule SwapGitApp.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {SwapGitApp.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      mod: {SwapGitApi.Application, []},
+      extra_applications: [:lager, :logger, :runtime_tools, :amqp, :hackney]
     ]
   end
 
@@ -49,6 +49,7 @@ defmodule SwapGitApp.MixProject do
       {:hackney, "~> 1.16.0"},
       {:sage, "~> 0.6.1"},
       {:xmap, "~> 0.2"},
+      {:oban, "~> 2.12.0"},
 
       # dev, test
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
@@ -71,6 +72,7 @@ defmodule SwapGitApp.MixProject do
       setup: ["deps.get", "ecto.setup"],
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
+      quality: ["format", "credo --strict", "sobelow --verbose", "dialyzer --format dialyxir"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"]
     ]
   end

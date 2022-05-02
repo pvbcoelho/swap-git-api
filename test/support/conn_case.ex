@@ -1,4 +1,4 @@
-defmodule SwapGitAppWeb.ConnCase do
+defmodule SwapGitApiWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule SwapGitAppWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use SwapGitAppWeb.ConnCase, async: true`, although
+  by setting `use SwapGitApiWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,17 +22,17 @@ defmodule SwapGitAppWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import SwapGitAppWeb.ConnCase
+      import SwapGitApiWeb.ConnCase
 
-      alias SwapGitAppWeb.Router.Helpers, as: Routes
+      alias SwapGitApiWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint SwapGitAppWeb.Endpoint
+      @endpoint SwapGitApiWeb.Endpoint
     end
   end
 
   setup tags do
-    SwapGitApp.DataCase.setup_sandbox(tags)
+    SwapGitApi.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end
