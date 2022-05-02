@@ -17,10 +17,10 @@ defmodule SwapGitApi.Infrastructure.Messaging.Consumer do
       routing_key: "SwapGitApi.Process.Created",
       deadletter_routing_key: "SwapGitApi.Process.Created",
       prefetch_count: "10",
-      terminate_timeout: 120_000,
+      terminate_timeout: 600_000,
       connection: Application.get_env(:swap_git_api, :rabbitmq),
       reconnect_attempt: 10,
-      handle_message_timeout: 120_000,
+      handle_message_timeout: 600_000,
       retry_delay_function: fn attempt -> :timer.sleep(2000 * attempt) end
     ]
   end
