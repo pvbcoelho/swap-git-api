@@ -133,19 +133,308 @@ defmodule SwapGitApi.Test.Mocks.GitClientImplMock do
     {:ok,
      [
        %{
-         "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11793",
-         "repository_url" => "https://api.github.com/repos/elixir-lang/elixir",
-         "labels_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11793/labels%SwapGitApi.Domain.Entities.Contributor{/name}",
+         "sha" => "1907914cf0d9d25b32373d3c8ad6b4b59877baaf",
+         "node_id" => "C_kwDOABLXGtoAKDE5MDc5MTRjZjBkOWQyNWIzMjM3M2QzYzhhZDZiNGI1OTg3N2JhYWY",
+         "commit" => %{
+           "author" => %{
+             "name" => "José Valim",
+             "email" => "jose.valim@dashbit.co",
+             "date" => "2022-05-02T10:08:05Z"
+           },
+           "committer" => %{
+             "name" => "GitHub",
+             "email" => "noreply@github.com",
+             "date" => "2022-05-02T10:08:05Z"
+           },
+           "message" =>
+             "Store :mfa in the Task struct (#11794)\n\nThis field can be used for reflection purposes.\r\n\r\nCloses #11716.\r\nCloses #11720.",
+           "tree" => %{
+             "sha" => "0132c9467acdbf655ed125d8679eb04847cd59f3",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/git/trees/0132c9467acdbf655ed125d8679eb04847cd59f3"
+           },
+           "url" =>
+             "https://api.github.com/repos/elixir-lang/elixir/git/commits/1907914cf0d9d25b32373d3c8ad6b4b59877baaf",
+           "comment_count" => 0,
+           "verification" => %{
+             "verified" => true,
+             "reason" => "valid",
+             "signature" =>
+               "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJib62FCRBK7hj4Ov3rIwAAatMIAJ8M716hFtoamhmzuHnwK0z1\nzRhZJK1ek/Dl6Hz4xZenl8PBoTZWYuJqV7uVIrWegsVMHax+tD3j/hjTSz0rAwsV\ndZyj+VhToWOLy21DRhj0IiRPypoTiveh+YfKKS+fmmZTvAMbiA8Lxet+Z9YzCD5C\n3Omrubo865JXUZSl3Jl4F7WYP8vTI0TTmy7KdinLaYLfUPSaX3qMqqRHorf4I3Xw\nAZw6PTOGEVJ93P6vEPfV/Wh5PF+8aIw1EqTwVtwHwVKnt6YXxNjI3wRuxcTz34aS\n38850/iMdjXLeCjjA6u03W322L32/9KOzvSpGy4m2uLZafsCVn1rkFOplrvLORU=\n=RK4q\n-----END PGP SIGNATURE-----\n",
+             "payload" =>
+               "tree 0132c9467acdbf655ed125d8679eb04847cd59f3\nparent 277184535e9d48c17b4b3bceaa5bfbe2175337f2\nauthor José Valim <jose.valim@dashbit.co> 1651486085 +0200\ncommitter GitHub <noreply@github.com> 1651486085 +0200\n\nStore :mfa in the Task struct (#11794)\n\nThis field can be used for reflection purposes.\r\n\r\nCloses #11716.\r\nCloses #11720.\r\n"
+           }
+         },
+         "url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/1907914cf0d9d25b32373d3c8ad6b4b59877baaf",
+         "html_url" =>
+           "https://github.com/elixir-lang/elixir/commit/1907914cf0d9d25b32373d3c8ad6b4b59877baaf",
          "comments_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11793/comments",
-         "events_url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11793/events",
-         "html_url" => "https://github.com/elixir-lang/elixir/pull/11793",
-         "id" => 1_222_490_098,
-         "node_id" => "PR_kwDOABLXGs43JaIQ",
-         "number" => 11793,
-         "title" => "GenServer=> Rename `continue` argument in handle_continue/2",
-         "user" => %{
+           "https://api.github.com/repos/elixir-lang/elixir/commits/1907914cf0d9d25b32373d3c8ad6b4b59877baaf/comments",
+         "author" => %{
+           "login" => "josevalim",
+           "id" => 9582,
+           "node_id" => "MDQ6VXNlcjk1ODI=",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/9582?v=4",
+           "gravatar_id" => "",
+           "url" => "https://api.github.com/users/josevalim",
+           "html_url" => "https://github.com/josevalim",
+           "followers_url" => "https://api.github.com/users/josevalim/followers",
+           "following_url" => "https://api.github.com/users/josevalim/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/josevalim/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/josevalim/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/josevalim/subscriptions",
+           "organizations_url" => "https://api.github.com/users/josevalim/orgs",
+           "repos_url" => "https://api.github.com/users/josevalim/repos",
+           "events_url" => "https://api.github.com/users/josevalim/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/josevalim/received_events",
+           "type" => "User",
+           "site_admin" => false
+         },
+         "committer" => %{
+           "login" => "web-flow",
+           "id" => 19_864_447,
+           "node_id" => "MDQ6VXNlcjE5ODY0NDQ3",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/19864447?v=4",
+           "gravatar_id" => "",
+           "url" => "https://api.github.com/users/web-flow",
+           "html_url" => "https://github.com/web-flow",
+           "followers_url" => "https://api.github.com/users/web-flow/followers",
+           "following_url" => "https://api.github.com/users/web-flow/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/web-flow/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/web-flow/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/web-flow/subscriptions",
+           "organizations_url" => "https://api.github.com/users/web-flow/orgs",
+           "repos_url" => "https://api.github.com/users/web-flow/repos",
+           "events_url" => "https://api.github.com/users/web-flow/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/web-flow/received_events",
+           "type" => "User",
+           "site_admin" => false
+         },
+         "parents" => [
+           %{
+             "sha" => "277184535e9d48c17b4b3bceaa5bfbe2175337f2",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/commits/277184535e9d48c17b4b3bceaa5bfbe2175337f2",
+             "html_url" =>
+               "https://github.com/elixir-lang/elixir/commit/277184535e9d48c17b4b3bceaa5bfbe2175337f2"
+           }
+         ]
+       },
+       %{
+         "sha" => "277184535e9d48c17b4b3bceaa5bfbe2175337f2",
+         "node_id" => "C_kwDOABLXGtoAKDI3NzE4NDUzNWU5ZDQ4YzE3YjRiM2JjZWFhNWJmYmUyMTc1MzM3ZjI",
+         "commit" => %{
+           "author" => %{
+             "name" => "José Valim",
+             "email" => "jose.valim@dashbit.co",
+             "date" => "2022-05-02T09:29:32Z"
+           },
+           "committer" => %{
+             "name" => "José Valim",
+             "email" => "jose.valim@dashbit.co",
+             "date" => "2022-05-02T09:29:54Z"
+           },
+           "message" =>
+             "Support :test_elixirc_options in mix test\n\nAnd skip debug and docs chunks by default.\n\nCloses #11755.",
+           "tree" => %{
+             "sha" => "2c4825fe23c0cd6d65f97ccb6b8e7340c2fed8e5",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/git/trees/2c4825fe23c0cd6d65f97ccb6b8e7340c2fed8e5"
+           },
+           "url" =>
+             "https://api.github.com/repos/elixir-lang/elixir/git/commits/277184535e9d48c17b4b3bceaa5bfbe2175337f2",
+           "comment_count" => 0,
+           "verification" => %{
+             "verified" => false,
+             "reason" => "unsigned",
+             "signature" => nil,
+             "payload" => nil
+           }
+         },
+         "url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/277184535e9d48c17b4b3bceaa5bfbe2175337f2",
+         "html_url" =>
+           "https://github.com/elixir-lang/elixir/commit/277184535e9d48c17b4b3bceaa5bfbe2175337f2",
+         "comments_url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/277184535e9d48c17b4b3bceaa5bfbe2175337f2/comments",
+         "author" => %{
+           "login" => "josevalim",
+           "id" => 9582,
+           "node_id" => "MDQ6VXNlcjk1ODI=",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/9582?v=4",
+           "gravatar_id" => "",
+           "url" => "https://api.github.com/users/josevalim",
+           "html_url" => "https://github.com/josevalim",
+           "followers_url" => "https://api.github.com/users/josevalim/followers",
+           "following_url" => "https://api.github.com/users/josevalim/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/josevalim/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/josevalim/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/josevalim/subscriptions",
+           "organizations_url" => "https://api.github.com/users/josevalim/orgs",
+           "repos_url" => "https://api.github.com/users/josevalim/repos",
+           "events_url" => "https://api.github.com/users/josevalim/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/josevalim/received_events",
+           "type" => "User",
+           "site_admin" => false
+         },
+         "committer" => %{
+           "login" => "josevalim",
+           "id" => 9582,
+           "node_id" => "MDQ6VXNlcjk1ODI=",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/9582?v=4",
+           "gravatar_id" => "",
+           "url" => "https://api.github.com/users/josevalim",
+           "html_url" => "https://github.com/josevalim",
+           "followers_url" => "https://api.github.com/users/josevalim/followers",
+           "following_url" => "https://api.github.com/users/josevalim/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/josevalim/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/josevalim/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/josevalim/subscriptions",
+           "organizations_url" => "https://api.github.com/users/josevalim/orgs",
+           "repos_url" => "https://api.github.com/users/josevalim/repos",
+           "events_url" => "https://api.github.com/users/josevalim/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/josevalim/received_events",
+           "type" => "User",
+           "site_admin" => false
+         },
+         "parents" => [
+           %{
+             "sha" => "fd51354d2c178428e9c780fc45c77b92f3ab377e",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/commits/fd51354d2c178428e9c780fc45c77b92f3ab377e",
+             "html_url" =>
+               "https://github.com/elixir-lang/elixir/commit/fd51354d2c178428e9c780fc45c77b92f3ab377e"
+           }
+         ]
+       },
+       %{
+         "sha" => "fd51354d2c178428e9c780fc45c77b92f3ab377e",
+         "node_id" => "C_kwDOABLXGtoAKGZkNTEzNTRkMmMxNzg0MjhlOWM3ODBmYzQ1Yzc3YjkyZjNhYjM3N2U",
+         "commit" => %{
+           "author" => %{
+             "name" => "Artem Solomatin",
+             "email" => "artem00298@gmail.com",
+             "date" => "2022-05-02T08:52:37Z"
+           },
+           "committer" => %{
+             "name" => "GitHub",
+             "email" => "noreply@github.com",
+             "date" => "2022-05-02T08:52:37Z"
+           },
+           "message" => "Fix punctuation and grammar issues in guides (#11790)",
+           "tree" => %{
+             "sha" => "4e4498f67e0fda8d10a8198da76bcd3d1e358e5b",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/git/trees/4e4498f67e0fda8d10a8198da76bcd3d1e358e5b"
+           },
+           "url" =>
+             "https://api.github.com/repos/elixir-lang/elixir/git/commits/fd51354d2c178428e9c780fc45c77b92f3ab377e",
+           "comment_count" => 0,
+           "verification" => %{
+             "verified" => true,
+             "reason" => "valid",
+             "signature" =>
+               "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJib5vVCRBK7hj4Ov3rIwAA764IACtPbkxgewCqD7ZQ5qvSTn/4\namMIX7JqjLEtbSByWL5LRKPSfMndgBioUqM1U8Hi81RNvHmYmqIb6XTqqoDKBYA6\nklaBVqc366VDDiqzkSR0BuvkrwiFP9U19tDYkSMkYT3IcohRmH2EYQoQjIEKAGeH\nGRMNeznmo8bJproZiIDX7TZkomJtFhDSmJJICgAoDBwTM516MZ3ZY5rX7/Q3ipV3\nvYfLtFgKemQHd02IpBDslNaMSkXmiwy2nVpieUZvqLfpomLHeUVgWYv2M6y7fp7T\nodHo0y1A+vujagaWMgkUEvKduk4vikQKAauNGgc9VKrn9k+5OUq1hxosxokX2b8=\n=INnh\n-----END PGP SIGNATURE-----\n",
+             "payload" =>
+               "tree 4e4498f67e0fda8d10a8198da76bcd3d1e358e5b\nparent 2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1\nauthor Artem Solomatin <artem00298@gmail.com> 1651481557 +0300\ncommitter GitHub <noreply@github.com> 1651481557 +0200\n\nFix punctuation and grammar issues in guides (#11790)\n\n"
+           }
+         },
+         "url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/fd51354d2c178428e9c780fc45c77b92f3ab377e",
+         "html_url" =>
+           "https://github.com/elixir-lang/elixir/commit/fd51354d2c178428e9c780fc45c77b92f3ab377e",
+         "comments_url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/fd51354d2c178428e9c780fc45c77b92f3ab377e/comments",
+         "author" => %{
+           "login" => "solar05",
+           "id" => 38_437_931,
+           "node_id" => "MDQ6VXNlcjM4NDM3OTMx",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/38437931?v=4",
+           "gravatar_id" => "",
+           "url" => "https://api.github.com/users/solar05",
+           "html_url" => "https://github.com/solar05",
+           "followers_url" => "https://api.github.com/users/solar05/followers",
+           "following_url" => "https://api.github.com/users/solar05/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/solar05/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/solar05/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/solar05/subscriptions",
+           "organizations_url" => "https://api.github.com/users/solar05/orgs",
+           "repos_url" => "https://api.github.com/users/solar05/repos",
+           "events_url" => "https://api.github.com/users/solar05/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/solar05/received_events",
+           "type" => "User",
+           "site_admin" => false
+         },
+         "committer" => %{
+           "login" => "web-flow",
+           "id" => 19_864_447,
+           "node_id" => "MDQ6VXNlcjE5ODY0NDQ3",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/19864447?v=4",
+           "gravatar_id" => "",
+           "url" => "https://api.github.com/users/web-flow",
+           "html_url" => "https://github.com/web-flow",
+           "followers_url" => "https://api.github.com/users/web-flow/followers",
+           "following_url" => "https://api.github.com/users/web-flow/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/web-flow/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/web-flow/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/web-flow/subscriptions",
+           "organizations_url" => "https://api.github.com/users/web-flow/orgs",
+           "repos_url" => "https://api.github.com/users/web-flow/repos",
+           "events_url" => "https://api.github.com/users/web-flow/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/web-flow/received_events",
+           "type" => "User",
+           "site_admin" => false
+         },
+         "parents" => [
+           %{
+             "sha" => "2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/commits/2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1",
+             "html_url" =>
+               "https://github.com/elixir-lang/elixir/commit/2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1"
+           }
+         ]
+       },
+       %{
+         "sha" => "2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1",
+         "node_id" => "C_kwDOABLXGtoAKDJjNzBiZDRmYTA1M2ZmZWYxYmJkYjhhNjY0YjViZGY5ODZjYjI1ZjE",
+         "commit" => %{
+           "author" => %{
+             "name" => "Eksperimental",
+             "email" => "eksperimental@autistici.org",
+             "date" => "2022-05-02T06:42:09Z"
+           },
+           "committer" => %{
+             "name" => "GitHub",
+             "email" => "noreply@github.com",
+             "date" => "2022-05-02T06:42:09Z"
+           },
+           "message" => "Update Copyright owners to manpages. (#11792)",
+           "tree" => %{
+             "sha" => "01421fc0098305603166a1f58adb5e368cda8c17",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/git/trees/01421fc0098305603166a1f58adb5e368cda8c17"
+           },
+           "url" =>
+             "https://api.github.com/repos/elixir-lang/elixir/git/commits/2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1",
+           "comment_count" => 0,
+           "verification" => %{
+             "verified" => true,
+             "reason" => "valid",
+             "signature" =>
+               "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJib31BCRBK7hj4Ov3rIwAAcG0IAJN79YsLfhf5YVif1Xg54Kp3\nFFTGgJVxs3nE6vqm7uH8xJZye21cUyyION/F/8ShKIGmDvjF9Ehvfp+Jfto40SN2\nbKiq+BSG9wN8h7nPGRAzeNWPJfWPibS9FfIfQFRqQ1JI2C3T4/kZn0cOreKyX90z\nSru8iVC/6l5H66/ykzAT9e5/TALlN0XcmqUMUtcIqM4MM4jc/IiBKMUc4Jwg3v2u\n+GRZNDK4jWmJtxn8Fprfcj377+ATY4T7Aurzjhpyf6T3RWNzz9cKGOq20fjKMcyE\nCckaO0DmP5A3maq+irOhXirtv2BCcoK53uNrMeotUdkXLFMAth4JSaLMGumaXVE=\n=NkLm\n-----END PGP SIGNATURE-----\n",
+             "payload" =>
+               "tree 01421fc0098305603166a1f58adb5e368cda8c17\nparent 5e0721841e217cd394cbbd12e0c930c317139a0a\nauthor Eksperimental <eksperimental@autistici.org> 1651473729 +0000\ncommitter GitHub <noreply@github.com> 1651473729 +0200\n\nUpdate Copyright owners to manpages. (#11792)\n\n"
+           }
+         },
+         "url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1",
+         "html_url" =>
+           "https://github.com/elixir-lang/elixir/commit/2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1",
+         "comments_url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/2c70bd4fa053ffef1bbdb8a664b5bdf986cb25f1/comments",
+         "author" => %{
            "login" => "eksperimental",
            "id" => 9_133_420,
            "node_id" => "MDQ6VXNlcjkxMzM0MjA=",
@@ -155,462 +444,134 @@ defmodule SwapGitApi.Test.Mocks.GitClientImplMock do
            "html_url" => "https://github.com/eksperimental",
            "followers_url" => "https://api.github.com/users/eksperimental/followers",
            "following_url" =>
-             "https://api.github.com/users/eksperimental/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-           "gists_url" =>
-             "https://api.github.com/users/eksperimental/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-           "starred_url" =>
-             "https://api.github.com/users/eksperimental/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
+             "https://api.github.com/users/eksperimental/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/eksperimental/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/eksperimental/starred%{/owner}%{/repo}",
            "subscriptions_url" => "https://api.github.com/users/eksperimental/subscriptions",
            "organizations_url" => "https://api.github.com/users/eksperimental/orgs",
            "repos_url" => "https://api.github.com/users/eksperimental/repos",
-           "events_url" =>
-             "https://api.github.com/users/eksperimental/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
+           "events_url" => "https://api.github.com/users/eksperimental/events%{/privacy}",
            "received_events_url" => "https://api.github.com/users/eksperimental/received_events",
            "type" => "User",
            "site_admin" => false
          },
-         "labels" => [],
-         "state" => "open",
-         "locked" => false,
-         "assignee" => nil,
-         "assignees" => [],
-         "milestone" => nil,
-         "comments" => 4,
-         "created_at" => "2022-05-02T05:14:14Z",
-         "updated_at" => "2022-05-02T11:41:58Z",
-         "closed_at" => nil,
-         "author_association" => "CONTRIBUTOR",
-         "active_lock_reason" => nil,
-         "draft" => false,
-         "pull_request" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/pulls/11793",
-           "html_url" => "https://github.com/elixir-lang/elixir/pull/11793",
-           "diff_url" => "https://github.com/elixir-lang/elixir/pull/11793.diff",
-           "patch_url" => "https://github.com/elixir-lang/elixir/pull/11793.patch",
-           "merged_at" => nil
-         },
-         "body" =>
-           "As I was reading the docs, it was not clear what the `continue` argument\r\nwas just by reading its name.\r\n\r\nhandle_call and handle_cast use `request` for a similar argument,\r\nso I unified it.",
-         "reactions" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11793/reactions",
-           "total_count" => 0,
-           "+1" => 0,
-           "-1" => 0,
-           "laugh" => 0,
-           "hooray" => 0,
-           "confused" => 0,
-           "heart" => 0,
-           "rocket" => 0,
-           "eyes" => 0
-         },
-         "timeline_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11793/timeline",
-         "performed_via_github_app" => nil
-       },
-       %{
-         "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11785",
-         "repository_url" => "https://api.github.com/repos/elixir-lang/elixir",
-         "labels_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11785/labels%SwapGitApi.Domain.Entities.Contributor{/name}",
-         "comments_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11785/comments",
-         "events_url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11785/events",
-         "html_url" => "https://github.com/elixir-lang/elixir/issues/11785",
-         "id" => 1_217_262_051,
-         "node_id" => "I_kwDOABLXGs5IjfHj",
-         "number" => 11785,
-         "title" => "inet_gethost.exe path error",
-         "user" => %{
-           "login" => "kotsius",
-           "id" => 35_947_133,
-           "node_id" => "MDQ6VXNlcjM1OTQ3MTMz",
-           "avatar_url" => "https://avatars.githubusercontent.com/u/35947133?v=4",
+         "committer" => %{
+           "login" => "web-flow",
+           "id" => 19_864_447,
+           "node_id" => "MDQ6VXNlcjE5ODY0NDQ3",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/19864447?v=4",
            "gravatar_id" => "",
-           "url" => "https://api.github.com/users/kotsius",
-           "html_url" => "https://github.com/kotsius",
-           "followers_url" => "https://api.github.com/users/kotsius/followers",
-           "following_url" =>
-             "https://api.github.com/users/kotsius/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-           "gists_url" =>
-             "https://api.github.com/users/kotsius/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-           "starred_url" =>
-             "https://api.github.com/users/kotsius/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
-           "subscriptions_url" => "https://api.github.com/users/kotsius/subscriptions",
-           "organizations_url" => "https://api.github.com/users/kotsius/orgs",
-           "repos_url" => "https://api.github.com/users/kotsius/repos",
-           "events_url" =>
-             "https://api.github.com/users/kotsius/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
-           "received_events_url" => "https://api.github.com/users/kotsius/received_events",
+           "url" => "https://api.github.com/users/web-flow",
+           "html_url" => "https://github.com/web-flow",
+           "followers_url" => "https://api.github.com/users/web-flow/followers",
+           "following_url" => "https://api.github.com/users/web-flow/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/web-flow/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/web-flow/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/web-flow/subscriptions",
+           "organizations_url" => "https://api.github.com/users/web-flow/orgs",
+           "repos_url" => "https://api.github.com/users/web-flow/repos",
+           "events_url" => "https://api.github.com/users/web-flow/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/web-flow/received_events",
            "type" => "User",
            "site_admin" => false
          },
-         "labels" => [],
-         "state" => "open",
-         "locked" => false,
-         "assignee" => nil,
-         "assignees" => [],
-         "milestone" => nil,
-         "comments" => 20,
-         "created_at" => "2022-04-27T12:09:16Z",
-         "updated_at" => "2022-04-28T19:10:50Z",
-         "closed_at" => nil,
-         "author_association" => "NONE",
-         "active_lock_reason" => nil,
-         "body" =>
-           "### Environment\r\n\r\n• Erlang/OTP 24⦗.3.3⦘ [erts-12.3.1] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]\r\n• Elixir 1.13.4 (compiled with Erlang/OTP 22)\r\n• Windows 10 Pro v20H2\r\n\r\n### Current behavior\r\n\r\n\"elixir myFile.exs\", \"mix ecto.create\", \"mix ecto.migrate\" output:\r\n\r\nC:\\Program Unknown option \"Files\\+Programming\\Erlang\\erts-12.3.1\\bin\\inet_gethost.exe\"\r\nUsage=> C:\\Program [-d [-d ...]] [-g ‹greedy threshold›] [‹number of workers›]\r\n\r\n### Expected behavior\r\n\r\nNo error message. Calling inet_gethost.exe should be able to handle the space in 'Program Files'.\r\nI guess that the solution would involve placing the inet_gethost execution path inside quotes.",
-         "reactions" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11785/reactions",
-           "total_count" => 0,
-           "+1" => 0,
-           "-1" => 0,
-           "laugh" => 0,
-           "hooray" => 0,
-           "confused" => 0,
-           "heart" => 0,
-           "rocket" => 0,
-           "eyes" => 0
-         },
-         "timeline_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11785/timeline",
-         "performed_via_github_app" => nil
-       },
-       %{
-         "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11763",
-         "repository_url" => "https://api.github.com/repos/elixir-lang/elixir",
-         "labels_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11763/labels%SwapGitApi.Domain.Entities.Contributor{/name}",
-         "comments_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11763/comments",
-         "events_url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11763/events",
-         "html_url" => "https://github.com/elixir-lang/elixir/pull/11763",
-         "id" => 1_207_214_581,
-         "node_id" => "PR_kwDOABLXGs42XsqZ",
-         "number" => 11763,
-         "title" => "feat=> allow app environment values to contain spaces",
-         "user" => %{
-           "login" => "thalesmg",
-           "id" => 16_166_434,
-           "node_id" => "MDQ6VXNlcjE2MTY2NDM0",
-           "avatar_url" => "https://avatars.githubusercontent.com/u/16166434?v=4",
-           "gravatar_id" => "",
-           "url" => "https://api.github.com/users/thalesmg",
-           "html_url" => "https://github.com/thalesmg",
-           "followers_url" => "https://api.github.com/users/thalesmg/followers",
-           "following_url" =>
-             "https://api.github.com/users/thalesmg/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-           "gists_url" =>
-             "https://api.github.com/users/thalesmg/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-           "starred_url" =>
-             "https://api.github.com/users/thalesmg/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
-           "subscriptions_url" => "https://api.github.com/users/thalesmg/subscriptions",
-           "organizations_url" => "https://api.github.com/users/thalesmg/orgs",
-           "repos_url" => "https://api.github.com/users/thalesmg/repos",
-           "events_url" =>
-             "https://api.github.com/users/thalesmg/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
-           "received_events_url" => "https://api.github.com/users/thalesmg/received_events",
-           "type" => "User",
-           "site_admin" => false
-         },
-         "labels" => [],
-         "state" => "open",
-         "locked" => false,
-         "assignee" => nil,
-         "assignees" => [],
-         "milestone" => nil,
-         "comments" => 8,
-         "created_at" => "2022-04-18T16:28:34Z",
-         "updated_at" => "2022-04-24T16:13:49Z",
-         "closed_at" => nil,
-         "author_association" => "CONTRIBUTOR",
-         "active_lock_reason" => nil,
-         "draft" => false,
-         "pull_request" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/pulls/11763",
-           "html_url" => "https://github.com/elixir-lang/elixir/pull/11763",
-           "diff_url" => "https://github.com/elixir-lang/elixir/pull/11763.diff",
-           "patch_url" => "https://github.com/elixir-lang/elixir/pull/11763.patch",
-           "merged_at" => nil
-         },
-         "body" =>
-           "When one needs to set an application environment value that contains\r\nspaces, such as a Mnesia directory path with spaces, the current\r\n`--erl` switch does not pass the spaces correctly down to `erl`:\r\n\r\n```\r\nͳ bin/iex --erl \"-mnesia dir \\\"/tmp/abc/with spaces/\\\"\" -e ':init.get_arguments()[:mnesia] |> IO.inspect(); System.halt()'\r\nErlang/OTP 24 [erts-12.1.2] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [jit]\r\n\r\n['dir', '\"/tmp/abc/with', 'spaces/\"']\r\n```\r\n\r\nWhich fails when loading the app:\r\n\r\n```\r\niex(1)> Application.load(:mnesia)\r\n\r\n13:26:44.461 [error] application_controller=> unterminated string starting with \"/tmp/abc/with\"=> \"/tmp/abc/with\r\n\r\n%SwapGitApi.Domain.Entities.Contributor{:error,%{:bad_environment_value, '\"/tmp/abc/with'}}\r\n```\r\n\r\nThis adds a new switch, `--app-env`, that helps with setting such\r\nvalues while preserving both the double quotes needed for Erlang to\r\nparse the value as a string and the spaces that might be in such\r\nstring.\r\n\r\n```\r\nͳ bin/iex --app-env mnesia dir \"\\\"/tmp/abc/with spaces/\\\"\" -e ':init.get_arguments()[:mnesia] |> IO.inspect(); System.halt()'\r\nErlang/OTP 24 [erts-12.1.2] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [jit]\r\n\r\n['dir', '\"/tmp/abc/with spaces/\"']\r\n```",
-         "reactions" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11763/reactions",
-           "total_count" => 1,
-           "+1" => 1,
-           "-1" => 0,
-           "laugh" => 0,
-           "hooray" => 0,
-           "confused" => 0,
-           "heart" => 0,
-           "rocket" => 0,
-           "eyes" => 0
-         },
-         "timeline_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11763/timeline",
-         "performed_via_github_app" => nil
-       },
-       %{
-         "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11753",
-         "repository_url" => "https://api.github.com/repos/elixir-lang/elixir",
-         "labels_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11753/labels%SwapGitApi.Domain.Entities.Contributor{/name}",
-         "comments_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11753/comments",
-         "events_url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11753/events",
-         "html_url" => "https://github.com/elixir-lang/elixir/issues/11753",
-         "id" => 1_199_093_072,
-         "node_id" => "I_kwDOABLXGs5HeLVQ",
-         "number" => 11753,
-         "title" => "Automatically perform NFC + additions for identifiers",
-         "user" => %{
-           "login" => "josevalim",
-           "id" => 9582,
-           "node_id" => "MDQ6VXNlcjk1ODI=",
-           "avatar_url" => "https://avatars.githubusercontent.com/u/9582?v=4",
-           "gravatar_id" => "",
-           "url" => "https://api.github.com/users/josevalim",
-           "html_url" => "https://github.com/josevalim",
-           "followers_url" => "https://api.github.com/users/josevalim/followers",
-           "following_url" =>
-             "https://api.github.com/users/josevalim/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-           "gists_url" =>
-             "https://api.github.com/users/josevalim/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-           "starred_url" =>
-             "https://api.github.com/users/josevalim/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
-           "subscriptions_url" => "https://api.github.com/users/josevalim/subscriptions",
-           "organizations_url" => "https://api.github.com/users/josevalim/orgs",
-           "repos_url" => "https://api.github.com/users/josevalim/repos",
-           "events_url" =>
-             "https://api.github.com/users/josevalim/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
-           "received_events_url" => "https://api.github.com/users/josevalim/received_events",
-           "type" => "User",
-           "site_admin" => false
-         },
-         "labels" => [
+         "parents" => [
            %{
-             "id" => 207_979,
-             "node_id" => "MDU6TGFiZWwyMDc5Nzk=",
-             "url" => "https://api.github.com/repos/elixir-lang/elixir/labels/Kind:Chore",
-             "name" => "Kind:Chore",
-             "color" => "fbca04",
-             "default" => false,
-             "description" => nil
-           },
-           %{
-             "id" => 1_000_549_131,
-             "node_id" => "MDU6TGFiZWwxMDAwNTQ5MTMx",
+             "sha" => "5e0721841e217cd394cbbd12e0c930c317139a0a",
              "url" =>
-               "https://api.github.com/repos/elixir-lang/elixir/labels/App:Elixir%20(compiler)",
-             "name" => "App:Elixir (compiler)",
-             "color" => "CCCCCC",
-             "default" => false,
-             "description" => ""
+               "https://api.github.com/repos/elixir-lang/elixir/commits/5e0721841e217cd394cbbd12e0c930c317139a0a",
+             "html_url" =>
+               "https://github.com/elixir-lang/elixir/commit/5e0721841e217cd394cbbd12e0c930c317139a0a"
            }
-         ],
-         "state" => "open",
-         "locked" => false,
-         "assignee" => nil,
-         "assignees" => [],
-         "milestone" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/milestones/30",
-           "html_url" => "https://github.com/elixir-lang/elixir/milestone/30",
-           "labels_url" => "https://api.github.com/repos/elixir-lang/elixir/milestones/30/labels",
-           "id" => 7_596_652,
-           "node_id" => "MI_kwDOABLXGs4Ac-ps",
-           "number" => 30,
-           "title" => "v1.14",
-           "description" => "",
-           "creator" => %{
-             "login" => "josevalim",
-             "id" => 9582,
-             "node_id" => "MDQ6VXNlcjk1ODI=",
-             "avatar_url" => "https://avatars.githubusercontent.com/u/9582?v=4",
-             "gravatar_id" => "",
-             "url" => "https://api.github.com/users/josevalim",
-             "html_url" => "https://github.com/josevalim",
-             "followers_url" => "https://api.github.com/users/josevalim/followers",
-             "following_url" =>
-               "https://api.github.com/users/josevalim/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-             "gists_url" =>
-               "https://api.github.com/users/josevalim/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-             "starred_url" =>
-               "https://api.github.com/users/josevalim/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
-             "subscriptions_url" => "https://api.github.com/users/josevalim/subscriptions",
-             "organizations_url" => "https://api.github.com/users/josevalim/orgs",
-             "repos_url" => "https://api.github.com/users/josevalim/repos",
-             "events_url" =>
-               "https://api.github.com/users/josevalim/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
-             "received_events_url" => "https://api.github.com/users/josevalim/received_events",
-             "type" => "User",
-             "site_admin" => false
-           },
-           "open_issues" => 3,
-           "closed_issues" => 7,
-           "state" => "open",
-           "created_at" => "2022-01-21T11:30:48Z",
-           "updated_at" => "2022-04-21T13:06:48Z",
-           "due_on" => "2022-05-31T07:00:00Z",
-           "closed_at" => nil
-         },
-         "comments" => 1,
-         "created_at" => "2022-04-10T16:34:11Z",
-         "updated_at" => "2022-04-26T12:25:51Z",
-         "closed_at" => nil,
-         "author_association" => "MEMBER",
-         "active_lock_reason" => nil,
-         "body" =>
-           "We should perform NFC normalization by default and provide a mechanism for additional normalizations (NFKC or others). At first, the only normalization we will perform is latin micro to greek mu found in NFKC. For the normalization, we will change the scriptset of the target letter (in this case, greek mu) to be the union of the scriptset of origin and target characters. Given latin mu is top, the result in this case is top too. This can be implemented programatically.\r\n\r\nThis rule will help us in the future if we want to handle things like converting Latin epsilon to Greek epsilon, but still distinguishing them from the Ukrainian epsilon-like character.\r\n\r\nWe should also improve the error messages for non-NFKC characters. If we have an invalid token, we can apply NFKC and try to parse it again. If it succeeds, the error message can tell the user how to properly write the identifier. This should be fully done on `elixir_tokenizer.erl` for now.\r\n\r\nOverall, we will have three distinct tasks:\r\n\r\n  * [ ] Apply NFC automatically instead of raising\r\n  * [ ] Support additional normalizations as explained above\r\n  * [ ] Improve error messages for identifiers not written in NFKC\r\n\r\nSee discussion in #11751. /cc @mrluc ",
-         "reactions" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11753/reactions",
-           "total_count" => 0,
-           "+1" => 0,
-           "-1" => 0,
-           "laugh" => 0,
-           "hooray" => 0,
-           "confused" => 0,
-           "heart" => 0,
-           "rocket" => 0,
-           "eyes" => 0
-         },
-         "timeline_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11753/timeline",
-         "performed_via_github_app" => nil
+         ]
        },
        %{
-         "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11744",
-         "repository_url" => "https://api.github.com/repos/elixir-lang/elixir",
-         "labels_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11744/labels%SwapGitApi.Domain.Entities.Contributor{/name}",
-         "comments_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11744/comments",
-         "events_url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11744/events",
-         "html_url" => "https://github.com/elixir-lang/elixir/issues/11744",
-         "id" => 1_195_723_504,
-         "node_id" => "I_kwDOABLXGs5HRUrw",
-         "number" => 11744,
-         "title" =>
-           "Possible bug in compiler emitted warnings about incompatibles types in guard",
-         "user" => %{
-           "login" => "lud",
-           "id" => 637_632,
-           "node_id" => "MDQ6VXNlcjYzNzYzMg==",
-           "avatar_url" => "https://avatars.githubusercontent.com/u/637632?v=4",
-           "gravatar_id" => "",
-           "url" => "https://api.github.com/users/lud",
-           "html_url" => "https://github.com/lud",
-           "followers_url" => "https://api.github.com/users/lud/followers",
-           "following_url" =>
-             "https://api.github.com/users/lud/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-           "gists_url" =>
-             "https://api.github.com/users/lud/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-           "starred_url" =>
-             "https://api.github.com/users/lud/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
-           "subscriptions_url" => "https://api.github.com/users/lud/subscriptions",
-           "organizations_url" => "https://api.github.com/users/lud/orgs",
-           "repos_url" => "https://api.github.com/users/lud/repos",
-           "events_url" =>
-             "https://api.github.com/users/lud/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
-           "received_events_url" => "https://api.github.com/users/lud/received_events",
-           "type" => "User",
-           "site_admin" => false
-         },
-         "labels" => [
-           %{
-             "id" => 207_974,
-             "node_id" => "MDU6TGFiZWwyMDc5NzQ=",
-             "url" => "https://api.github.com/repos/elixir-lang/elixir/labels/Kind:Bug",
-             "name" => "Kind:Bug",
-             "color" => "e10c02",
-             "default" => false,
-             "description" => nil
+         "sha" => "5e0721841e217cd394cbbd12e0c930c317139a0a",
+         "node_id" => "C_kwDOABLXGtoAKDVlMDcyMTg0MWUyMTdjZDM5NGNiYmQxMmUwYzkzMGMzMTcxMzlhMGE",
+         "commit" => %{
+           "author" => %{
+             "name" => "Kai",
+             "email" => "kw7oe@users.noreply.github.com",
+             "date" => "2022-05-01T15:45:10Z"
            },
-           %{
-             "id" => 2_660_471_585,
-             "node_id" => "MDU6TGFiZWwyNjYwNDcxNTg1",
+           "committer" => %{
+             "name" => "GitHub",
+             "email" => "noreply@github.com",
+             "date" => "2022-05-01T15:45:10Z"
+           },
+           "message" => "Add ExUnit.run/1 to rerun test modules (#11788)",
+           "tree" => %{
+             "sha" => "5ebb5f0072f95332f88b738a7d5f3b3f2b091747",
              "url" =>
-               "https://api.github.com/repos/elixir-lang/elixir/labels/App:Elixir%20(checker)",
-             "name" => "App:Elixir (checker)",
-             "color" => "CCCCCC",
-             "default" => false,
-             "description" => ""
+               "https://api.github.com/repos/elixir-lang/elixir/git/trees/5ebb5f0072f95332f88b738a7d5f3b3f2b091747"
+           },
+           "url" =>
+             "https://api.github.com/repos/elixir-lang/elixir/git/commits/5e0721841e217cd394cbbd12e0c930c317139a0a",
+           "comment_count" => 0,
+           "verification" => %{
+             "verified" => true,
+             "reason" => "valid",
+             "signature" =>
+               "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJibqsGCRBK7hj4Ov3rIwAA90wIAJNpVPkYJEn4IfeBe3haoa2l\nIGo9o9SjAg6uR8TiriZXBCQNrF1hKuTihLXvpUq7qgiI77E38JBYeCDsPRNx5hRo\n1LIqHJb2esdClqmjLBbo70xZJV/tWa4Q4JQoY1hNubefZ7bTyElvIU34a/oUzc0S\nUGPEyXjP3UqXKSP4ySxQqd0WtcEj3jKAOZhM/i6SubAHa16XIhw5NT9yhaeNOoh6\nfXokYRTn/O9LgRaz6TTpC6fEUq9atNSOfzJGHtmaccSg9UoQhLMFvmEZ/vpYUF9D\nNOoLlwHuNV41Qzxyj0X2ZQop2VU1UIYNH5GGSAMOWdgYXb7JrTuePVRR2M6TaxU=\n=bZfI\n-----END PGP SIGNATURE-----\n",
+             "payload" =>
+               "tree 5ebb5f0072f95332f88b738a7d5f3b3f2b091747\nparent 3ba538113e9da41c42585266548024c7e18baea2\nauthor Kai <kw7oe@users.noreply.github.com> 1651419910 +0800\ncommitter GitHub <noreply@github.com> 1651419910 +0200\n\nAdd ExUnit.run/1 to rerun test modules (#11788)\n\n"
            }
-         ],
-         "state" => "open",
-         "locked" => false,
-         "assignee" => %{
-           "login" => "ericmj",
-           "id" => 316_890,
-           "node_id" => "MDQ6VXNlcjMxNjg5MA==",
-           "avatar_url" => "https://avatars.githubusercontent.com/u/316890?v=4",
+         },
+         "url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/5e0721841e217cd394cbbd12e0c930c317139a0a",
+         "html_url" =>
+           "https://github.com/elixir-lang/elixir/commit/5e0721841e217cd394cbbd12e0c930c317139a0a",
+         "comments_url" =>
+           "https://api.github.com/repos/elixir-lang/elixir/commits/5e0721841e217cd394cbbd12e0c930c317139a0a/comments",
+         "author" => %{
+           "login" => "kw7oe",
+           "id" => 12_683_067,
+           "node_id" => "MDQ6VXNlcjEyNjgzMDY3",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/12683067?v=4",
            "gravatar_id" => "",
-           "url" => "https://api.github.com/users/ericmj",
-           "html_url" => "https://github.com/ericmj",
-           "followers_url" => "https://api.github.com/users/ericmj/followers",
-           "following_url" =>
-             "https://api.github.com/users/ericmj/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-           "gists_url" =>
-             "https://api.github.com/users/ericmj/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-           "starred_url" =>
-             "https://api.github.com/users/ericmj/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
-           "subscriptions_url" => "https://api.github.com/users/ericmj/subscriptions",
-           "organizations_url" => "https://api.github.com/users/ericmj/orgs",
-           "repos_url" => "https://api.github.com/users/ericmj/repos",
-           "events_url" =>
-             "https://api.github.com/users/ericmj/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
-           "received_events_url" => "https://api.github.com/users/ericmj/received_events",
+           "url" => "https://api.github.com/users/kw7oe",
+           "html_url" => "https://github.com/kw7oe",
+           "followers_url" => "https://api.github.com/users/kw7oe/followers",
+           "following_url" => "https://api.github.com/users/kw7oe/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/kw7oe/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/kw7oe/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/kw7oe/subscriptions",
+           "organizations_url" => "https://api.github.com/users/kw7oe/orgs",
+           "repos_url" => "https://api.github.com/users/kw7oe/repos",
+           "events_url" => "https://api.github.com/users/kw7oe/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/kw7oe/received_events",
            "type" => "User",
            "site_admin" => false
          },
-         "assignees" => [
-           %{
-             "login" => "ericmj",
-             "id" => 316_890,
-             "node_id" => "MDQ6VXNlcjMxNjg5MA==",
-             "avatar_url" => "https://avatars.githubusercontent.com/u/316890?v=4",
-             "gravatar_id" => "",
-             "url" => "https://api.github.com/users/ericmj",
-             "html_url" => "https://github.com/ericmj",
-             "followers_url" => "https://api.github.com/users/ericmj/followers",
-             "following_url" =>
-               "https://api.github.com/users/ericmj/following%SwapGitApi.Domain.Entities.Contributor{/other_user}",
-             "gists_url" =>
-               "https://api.github.com/users/ericmj/gists%SwapGitApi.Domain.Entities.Contributor{/gist_id}",
-             "starred_url" =>
-               "https://api.github.com/users/ericmj/starred%SwapGitApi.Domain.Entities.Contributor{/owner}%SwapGitApi.Domain.Entities.Contributor{/repo}",
-             "subscriptions_url" => "https://api.github.com/users/ericmj/subscriptions",
-             "organizations_url" => "https://api.github.com/users/ericmj/orgs",
-             "repos_url" => "https://api.github.com/users/ericmj/repos",
-             "events_url" =>
-               "https://api.github.com/users/ericmj/events%SwapGitApi.Domain.Entities.Contributor{/privacy}",
-             "received_events_url" => "https://api.github.com/users/ericmj/received_events",
-             "type" => "User",
-             "site_admin" => false
-           }
-         ],
-         "milestone" => nil,
-         "comments" => 6,
-         "created_at" => "2022-04-07T08:49:00Z",
-         "updated_at" => "2022-04-10T16:36:09Z",
-         "closed_at" => nil,
-         "author_association" => "NONE",
-         "active_lock_reason" => nil,
-         "body" =>
-           "```\r\nErlang/OTP 24 [erts-12.2.1] [source] [64-bit] [smp:16:16] [ds:16:16:10] [async-threads:1] [jit]\r\n\r\nElixir 1.13.3 (compiled with Erlang/OTP 24)\r\n```\r\n\r\nPlease have a look at this demo code, notably the `defguard` call and how it is used:\r\n\r\n```elixir\r\ndefmodule SomeGood do\r\n  defstruct dummy=> nil\r\nend\r\n\r\ndefmodule Demo do\r\n  @good_modules [Somegood]\r\n\r\n  defguard is_good(mod_or_struct)\r\n           when (is_atom(mod_or_struct) and mod_or_struct in @good_modules) or\r\n                  (is_map(mod_or_struct) and is_map_key(mod_or_struct, :__struct__) and\r\n                     :erlang.map_get(:__struct__, mod_or_struct) in @good_modules)\r\n\r\n  defguard is_bad(mod_or_struct) when not is_good(mod_or_struct)\r\nend\r\n\r\ndefmodule Worker do\r\n  import Demo\r\n\r\n  def work(%contract%SwapGitApi.Domain.Entities.Contributor{}) when is_good(contract) do\r\n    :alright\r\n  end\r\n\r\n  def work(_) do\r\n    :nope\r\n  end\r\n\r\n  def a_case(data) do\r\n    case data do\r\n      %contract%SwapGitApi.Domain.Entities.Contributor{} when is_good(contract) -> :good_contract\r\n      data when is_good(data) -> :good_data\r\n      _other -> :bad_data\r\n    end\r\n  end\r\nend\r\n\r\ndefmodule Dependent do\r\n  require Demo\r\n\r\n  def get_fun do\r\n    fn\r\n      %contract%SwapGitApi.Domain.Entities.Contributor{} when Demo.is_bad(contract) -> :nope\r\n      _ -> :alright\r\n    end\r\n  end\r\nend\r\n```\r\n\r\nIt produces the following warnings:\r\n\r\n```\r\nwarning=> expected Kernel.is_map_key/2 to have signature:\r\n\r\n    :__struct__, atom() -> dynamic()\r\n\r\nbut it has signature:\r\n\r\n    dynamic(), %%SwapGitApi.Domain.Entities.Contributor{optional(dynamic()) => dynamic()} -> dynamic()\r\n\r\nin expression:\r\n\r\n    # lib/demo.ex:41\r\n    is_map_key(contract, :__struct__)\r\n\r\nConflict found at\r\n  lib/demo.ex:41=> Dependent.get_fun/0\r\n\r\nwarning=> incompatible types:\r\n\r\n    atom() !~ map()\r\n\r\nin expression:\r\n\r\n    # lib/demo.ex:19\r\n    is_map(contract)\r\n\r\nwhere \"contract\" was given the type atom() in:\r\n\r\n    # lib/demo.ex:19\r\n    %contract%SwapGitApi.Domain.Entities.Contributor{}\r\n\r\nwhere \"contract\" was given the type map() in:\r\n\r\n    # lib/demo.ex:19\r\n    is_map(contract)\r\n\r\nConflict found at\r\n  lib/demo.ex:19=> Worker.work/1\r\n\r\nwarning=> incompatible types:\r\n\r\n    atom() !~ map()\r\n\r\nin expression:\r\n\r\n    # lib/demo.ex:29\r\n    is_map(contract)\r\n\r\nwhere \"contract\" was given the type atom() in:\r\n\r\n    # lib/demo.ex:29\r\n    %contract%SwapGitApi.Domain.Entities.Contributor{}\r\n\r\nwhere \"contract\" was given the type map() in:\r\n\r\n    # lib/demo.ex:29\r\n    is_map(contract)\r\n\r\nConflict found at\r\n  lib/demo.ex:29=> Worker.a_case/1\r\n\r\n```\r\nBut to me it looks like the guards are fine.\r\n\r\nThe main guard is defined as is instead of using `is_struct` because I was trying to find why there was such warnings.\r\n\r\nThe warning about `expected Kernel.is_map_key/2 to have signature` is caused by the usage of the guard defined as `defguard is_bad(mod_or_struct) when not is_good(mod_or_struct)` only.",
-         "reactions" => %{
-           "url" => "https://api.github.com/repos/elixir-lang/elixir/issues/11744/reactions",
-           "total_count" => 0,
-           "+1" => 0,
-           "-1" => 0,
-           "laugh" => 0,
-           "hooray" => 0,
-           "confused" => 0,
-           "heart" => 0,
-           "rocket" => 0,
-           "eyes" => 0
+         "committer" => %{
+           "login" => "web-flow",
+           "id" => 19_864_447,
+           "node_id" => "MDQ6VXNlcjE5ODY0NDQ3",
+           "avatar_url" => "https://avatars.githubusercontent.com/u/19864447?v=4",
+           "gravatar_id" => "",
+           "url" => "https://api.github.com/users/web-flow",
+           "html_url" => "https://github.com/web-flow",
+           "followers_url" => "https://api.github.com/users/web-flow/followers",
+           "following_url" => "https://api.github.com/users/web-flow/following%{/other_user}",
+           "gists_url" => "https://api.github.com/users/web-flow/gists%{/gist_id}",
+           "starred_url" => "https://api.github.com/users/web-flow/starred%{/owner}%{/repo}",
+           "subscriptions_url" => "https://api.github.com/users/web-flow/subscriptions",
+           "organizations_url" => "https://api.github.com/users/web-flow/orgs",
+           "repos_url" => "https://api.github.com/users/web-flow/repos",
+           "events_url" => "https://api.github.com/users/web-flow/events%{/privacy}",
+           "received_events_url" => "https://api.github.com/users/web-flow/received_events",
+           "type" => "User",
+           "site_admin" => false
          },
-         "timeline_url" =>
-           "https://api.github.com/repos/elixir-lang/elixir/issues/11744/timeline",
-         "performed_via_github_app" => nil
+         "parents" => [
+           %{
+             "sha" => "3ba538113e9da41c42585266548024c7e18baea2",
+             "url" =>
+               "https://api.github.com/repos/elixir-lang/elixir/commits/3ba538113e9da41c42585266548024c7e18baea2",
+             "html_url" =>
+               "https://github.com/elixir-lang/elixir/commit/3ba538113e9da41c42585266548024c7e18baea2"
+           }
+         ]
        }
      ]}
   end

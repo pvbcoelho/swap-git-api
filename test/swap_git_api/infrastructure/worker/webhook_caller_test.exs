@@ -7,14 +7,14 @@ defmodule SwapGitApi.Workers.WebHookWorkerTest do
 
   describe "schedule" do
     test "Should schedule webhook callback correctly" do
-      CallbackWorker.schedule(WebHookWorker, %{process_id: "id_test"})
+      CallbackWorker.schedule(WebHookWorker, %{owner_id: "id_test"})
 
       in_an_day = DateTime.add(DateTime.utc_now(), 3600 * 24, :second)
 
       assert_enqueued(
         worker: WebHookWorker,
         queue: :webhook,
-        args: %{process_id: "id_test"},
+        args: %{owner_id: "id_test"},
         scheduled_at: in_an_day
       )
     end

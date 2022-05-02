@@ -32,7 +32,7 @@ $ cd swap-git-api
 $ make build
 
 # Execute os testes
-$ make test
+$ docker-compose exec --env MIX_ENV=test swap-git-api mix test
 
 # Execute a aplicação
 $ make run

@@ -39,7 +39,7 @@ defmodule SwapGitApi.Application.Services.GitService do
 
     ProcessHandler.update_process(process, %{"status" => "finalized"})
     CallbackWorker.schedule(WebHookWorker, %{owner_id: process.owner_id})
-    reponse
+    {:ok, reponse}
   end
 
   def save_error(_payload) do

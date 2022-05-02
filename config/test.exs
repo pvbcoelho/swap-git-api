@@ -37,5 +37,5 @@ config :swap_git_api, :rabbitmq,
 
 config :swap_git_api, :messages,
   exchange_name: "swap.git.api.exchange_test",
-  queue_name: "swap.git.api.queue",
+  queue_name: "swap.git.api.queue_test",
   retries: 10
